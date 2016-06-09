@@ -7,6 +7,7 @@ foo(1,2,3,4)
 puts({"members" => 193, "year" => 2014}.size)
 =end
 =begin
+$var_global = 1
 class Student
     @@number = 0
     def initialize(id, name)
@@ -46,12 +47,19 @@ end
 (0..10).each do |j|
     p "I'm inside the loop EACH number #{j}"
 end
+
+i = 1
+while i < 100
+    p i
+    i += 1
+end
+
 =end
 
 # {} -> Sempre será um "code block"
 
 # Using yield
-
+=begin
 def sample
     p "This is line 1"
     yield
@@ -59,4 +67,26 @@ def sample
     yield
 end
 
-sample {p " line in the middle"}
+# sample {p " line in the middle"}
+
+def p_list(array, first =1)
+    counter = first
+    array.each do |item|
+        puts "#{yield counter}. #{item}"
+        counter = counter.next
+    end
+end
+
+# p_list(["python", "ruby", "shel"], "zz")
+
+p_list(["abc", "def", "ghi"], 10) {|i| "<#{i}>"}
+=end
+
+# Gettind data form command line
+=begin
+name = gets
+p name.chomp # remove line break
+
+number = gets # gets only Strings
+p number
+=end
