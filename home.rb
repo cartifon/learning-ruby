@@ -148,3 +148,23 @@ p 1/(x+y)
 p Math.sqrt(x ** 6 + y ** 5)
 p (x+y).abs
 =end
+
+a = Random.rand(101)
+case a
+when 96..100
+    letterGrade = "A+"
+when 90..95
+    letterGrade = "A-"
+when 86..89
+    letterGrade = "B+"
+when 80..85
+    letterGrade = "B-"
+when 76..79
+    letterGrade = "C+"
+when 70..75
+    letterGrade = "C-"
+else
+    letterGrade = "F"
+end
+p "Grade: " + a.to_s
+p "Grade Letter: " + letterGrade + "!"
