@@ -105,3 +105,46 @@ first,last = "Jane      ,Doe".split(/,/)
 p first.squeeze
 p last
 =end
+
+# Working with numbers
+
+# Integers
+# 100, -200, 3, 5
+=begin
+% -> Module
+** -> exponencial
+-10.abs -> absolute
+10.div(2) -> division
+10.modulo(4) -> module
+100.to_s -> to String
+=end
+
+# Floats
+# 3.14159
+
+# Binary
+# 0b101
+
+# Hexas
+# 0x10
+
+# Ranges
+=begin
+letters = 'a'..'z'
+letters.include?('h')
+letters.max
+letters.min
+letters.each {|letter| print letter}
+p letters
+
+one = {'green' => '10'}
+two = {'green' => '10'}
+p one == two
+
+x = -13
+y = 2.0
+p x/y-3
+p 1/(x+y)
+p Math.sqrt(x ** 6 + y ** 5)
+p (x+y).abs
+=end
