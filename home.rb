@@ -90,3 +90,18 @@ p name.chomp # remove line break
 number = gets # gets only Strings
 p number
 =end
+
+# Putting multiples line
+=begin
+words = <<HERE
+    Here, I can put
+    a lot of words
+    in differents lines
+    easily.
+HERE
+print words
+
+first,last = "Jane      ,Doe".split(/,/)
+p first.squeeze
+p last
+=end
