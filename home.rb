@@ -14,9 +14,9 @@ class Student
         @stu_id = id
         @stu_name = name
         @@number += 1
-        print_value
+        p _value
     end
-    def print_value()
+    def p _value()
         p "Student id: #@stu_id"
         p "Student name: #@stu_name"
     end
@@ -99,7 +99,7 @@ words = <<HERE
     in differents lines
     easily.
 HERE
-print words
+p  words
 
 first,last = "Jane      ,Doe".split(/,/)
 p first.squeeze
@@ -134,7 +134,7 @@ letters = 'a'..'z'
 letters.include?('h')
 letters.max
 letters.min
-letters.each {|letter| print letter}
+letters.each {|letter| p  letter}
 p letters
 
 one = {'green' => '10'}
@@ -148,7 +148,7 @@ p 1/(x+y)
 p Math.sqrt(x ** 6 + y ** 5)
 p (x+y).abs
 =end
-
+=begin
 a = Random.rand(101)
 case a
 when 96..100
@@ -168,3 +168,45 @@ else
 end
 p "Grade: " + a.to_s
 p "Grade Letter: " + letterGrade + "!"
+=end
+=begin
+answer = "Watson\n"
+puts("Let's play a guessing game. You get three tries.")
+p ("What is the name of the computer that played on Jeopardy? ")
+response = gets
+if response == answer
+   puts("That's right!")
+else
+   p ("Sorry. Guess again: ")
+   response = gets
+   if response == answer
+      puts("That's right!")
+   else
+      p ("Sorry. Guess again: ")
+      response = gets
+      if response == answer
+         puts("That's right!")
+      else
+         puts("Sorry. The answer is Watson.")
+      end
+   end
+end
+
+p ("Enter the first number: ")
+number1 = Float(gets)
+p ("Enter the second number: ")
+number2 = Float(gets)
+p ("Enter an operation (+,-,*,/): ")
+op = gets
+op = op.chomp
+case op
+   when "+"
+      puts(number1 + number2)
+   when "-"
+      puts(number1 - number2)
+   when "*"
+      puts(number1 * number2)
+   when "/"
+      puts(number1 / number2)
+end
+=end
