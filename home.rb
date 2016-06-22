@@ -258,13 +258,31 @@
 #     p 'Sorry. Try again'
 #   end
 # end
-p 'Enter a sentence: '
-sentence = gets.chomp
-letters = sentence.split(//)
-vc = 0
-for letter in letters
-  case letter
-  when 'a', 'e', 'i', 'o', 'u' then vc += 1
-  end
+# p 'Enter a sentence: '
+# sentence = gets.chomp
+# letters = sentence.split(//)
+# vc = 0
+# for letter in letters
+#   case letter
+#   when 'a', 'e', 'i', 'o', 'u' then vc += 1
+#   end
+# end
+# p 'Vogal count: ', vc
+
+# Workint with methods now
+
+def square(num)
+  num * num
 end
-p 'Vogal count: ', vc
+
+def power(base, exp)
+  product = 1
+  while exp > 0
+    product *= base
+    exp -= 1
+  end
+  return product
+end
+
+p square(2)
+p power(2, 3)
