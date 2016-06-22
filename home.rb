@@ -243,18 +243,28 @@
 #   p 'More? (y/n)'
 #   keep = gets.chomp
 # end
-answer = 'Adam'
-tries = 0
-while tries < 5
-  p 'First man to be alive'
-  response = gets.chomp
-  tries += 1
-  if response == answer
-    p "That's it!"
-    exit
-  elsif tries == 5
-    p 'Sorry, the answer is ' + answer
-  else
-    p 'Sorry. Try again'
+# answer = 'Adam'
+# tries = 0
+# while tries < 5
+#   p 'First man to be alive'
+#   response = gets.chomp
+#   tries += 1
+#   if response == answer
+#     p "That's it!"
+#     exit
+#   elsif tries == 5
+#     p 'Sorry, the answer is ' + answer
+#   else
+#     p 'Sorry. Try again'
+#   end
+# end
+p 'Enter a sentence: '
+sentence = gets.chomp
+letters = sentence.split(//)
+vc = 0
+for letter in letters
+  case letter
+  when 'a', 'e', 'i', 'o', 'u' then vc += 1
   end
 end
+p 'Vogal count: ', vc
