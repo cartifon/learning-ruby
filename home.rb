@@ -237,8 +237,24 @@
 #     redo
 #   end
 #   if smt == 'stop'
+#     exit
 #     break
 #   end
 #   p 'More? (y/n)'
 #   keep = gets.chomp
 # end
+answer = 'Adam'
+tries = 0
+while tries < 5
+  p 'First man to be alive'
+  response = gets.chomp
+  tries += 1
+  if response == answer
+    p "That's it!"
+    exit
+  elsif tries == 5
+    p 'Sorry, the answer is ' + answer
+  else
+    p 'Sorry. Try again'
+  end
+end
